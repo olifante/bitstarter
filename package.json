@@ -2,10 +2,27 @@
   "name": "node-example",
   "version": "0.0.1",
   "dependencies": {
-    "express": "2.5.x"
+    "express": "2.5.x",
+    "cheerio": "0.12.x",
+    "commander": "1.3.x"
   },
   "engines": {
     "node": "0.8.x",
     "npm": "1.1.x"
+  },
+  "description": "ERROR: No README data found!",
+  "main": "web.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/olifante/bitstarter"
+  },
+  "author": "",
+  "license": "BSD",
+  "bugs": {
+    "url": "https://github.com/olifante/bitstarter/issues"
   }
 }
