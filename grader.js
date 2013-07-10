@@ -93,7 +93,6 @@ if (require.main === module) {
         clone(assertFileExists), HTMLFILE_DEFAULT)
         .option('-u, --url <url>', 'URL')
         .parse(process.argv);
-    if (program.checks) console.log('  - checks ' + program.checks);
     if (program.url) {
         rest.get(program.url).on('complete', function (result) {
             if (result instanceof Error) {
