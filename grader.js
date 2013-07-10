@@ -95,21 +95,17 @@ if (require.main === module) {
         .parse(process.argv);
     if (program.checks) console.log('  - checks ' + program.checks);
     if (program.url) {
-        console.log('  - url ' + program.url);
-
         rest.get(program.url).on('complete', function (result) {
             if (result instanceof Error) {
                 sys.puts('Error: ' + result.message);
                 this.retry(5000); // try again after 5 sec  
             } else {
-                //                console.log(typeof result);
                 var checkJson = checkUrl(result, program.checks);
                 var outJson = JSON.stringify(checkJson, null, 4);
                 console.log(outJson);
             }
         });
     } else if (program.file) {
-        console.log('  - file ' + program.file);
         var checkJson = checkHtmlFile(program.file, program.checks);
         var outJson = JSON.stringify(checkJson, null, 4);
         console.log(outJson);
